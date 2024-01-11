@@ -4,6 +4,7 @@
 
 class Storage {
   #items;
+  
   constructor(itemsArray) {
     this.#items = itemsArray;
   }

@@ -3,6 +3,7 @@
 // ============================================== Задача 2. Склад ===============================================
 
 class Storage {
+  
   #items;
   
   constructor(itemsArray) {
@@ -18,14 +19,10 @@ class Storage {
   }
 
   removeItem(itemToRemove) {
-    this.#items.forEach(item => {
-      if (item === itemToRemove) {
-        this.#items.splice(this.#items.indexOf(itemToRemove), 1);
-      }
-    });
-  }
+    this.#items = this.#items.filter((item) => item !== itemToRemove);
 }
 
+}
 // ============================================== Перевірка =====================================================
 
 const storage = new Storage(['Nanitoids', 'Prolonger', 'Antigravitator']);
